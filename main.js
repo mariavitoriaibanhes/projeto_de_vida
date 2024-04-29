@@ -32,6 +32,19 @@ for(let i=0;i <botoes.length;i++){
         minutos %= 60;
         horas %= 24;
 
-        if(tempoFinal > 0){
-        return dias + " dias " + horas + "horas " + minutos + "minutos" + segundos + "segundos";//adicionado dentro
-}
+        if (tempoFinal > 0){
+            return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos"; //adicionado 
+        } else {
+            return "Prazo Finalizado";
+        }
+    }
+    function atualizaCronometro(){ //adicionado
+        for (let i=0; i<contadores.length;i++){ //adicionado
+            contadores[i].textContent = calculaTempo(tempos[i]); //adicionado
+        }
+    }
+    function atualizaCronometro(){ //adicionado
+        for (let i=0; i<contadores.length;i++){ //adicionado
+            contadores[i].textContent = calculaTempo(tempos[i]);  //adicionado
+        }
+    }
